@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Purbasha 💖</title>
+<style>
+body{
+  margin:0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ffd6e8, #ffeef5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+}
+.card{
+  background:white;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 15px 40px rgba(255,0,120,.3);
+  max-width:350px;
+}
+h1{color:#ff4d88;}
+button{
+  padding:12px 22px;
+  border:none;
+  border-radius:30px;
+  background:#ff4d88;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:20px;
+}
+button:hover{background:#ff1a66;}
+</style>
+</head>
+<body>
+
+<div class="card" id="page1">
+  <h1>Hey Purbasha 🌸</h1>
+  <p>You make my world brighter just by being you.</p>
+  <button id="tapBtn">Tap for something special 💌</button>
+</div>
+
+<div class="card" id="page2" style="display:none">
+  <h1>Will you be my Valentine? 💖</h1>
+  <button onclick="yes()">Yes 💕</button>
+  <button onclick="no()">No 🙈</button>
+</div>
+
+<script>
+document.getElementById("tapBtn").addEventListener("click", ()=>{
+  document.getElementById("page1").style.display="none";
+  document.getElementById("page2").style.display="block";
+});
+
+function yes(){
+  document.body.innerHTML = "<h1 style='color:#ff4d88'>You made me the happiest! 💖🥹</h1>";
+}
+function no(){
+  alert("No is not an option 😌💘");
+}
+</script>
+
+</body>
+</html>
